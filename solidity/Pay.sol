@@ -11,13 +11,14 @@ contract payTest{
         return account.balance;
     }
     function trtansfer () payable{
-        this.transfer(msg.value);
+        address(this).transfer(msg.value);
     }
-        function trtansfer1 () payable{
-            address account = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
+    function trtansfer1 () payable{
+        address account = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
         account.transfer(10 ether);
     }
-    function() payable{
-
+    function getThis() view public returns(address){
+        return this;
     }
+
 }
