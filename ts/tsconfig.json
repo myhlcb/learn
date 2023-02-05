@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true, // 开启装饰器
+        "target":"es6"
+     }
+}
