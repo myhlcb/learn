@@ -7,6 +7,9 @@ contract addressTest{
       return uint8(0x5B);
   }
   function changeAddr() view public returns(address){
-return address(uint160(account));
+      return address(uint160(account));
+  }
+  function getAddr(address _addr) view public returns(address,address,address){
+    return (_addr,msg.sender,this);
   }
 }
